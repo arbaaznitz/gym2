@@ -1,0 +1,72 @@
+<h2>Location </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Button Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Add some basic styling for the container */
+    .container {
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+
+    /* Add some basic styling for the text */
+    #text-to-copy {
+      margin-right: 10px; /* Add some space between text and button */
+    }
+
+    /* Add some basic styling for the copy button */
+    .copy-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The container for text and copy button -->
+  <div class="container">
+    <!-- The text you want to copy -->
+    <div id="text-to-copy">This is the text you want to copy.</div>
+
+    <!-- The copy button with a copy icon -->
+    <button class="copy-btn" onclick="copyText()"><i class="fas fa-copy"></i></button>
+  </div>
+
+  <script>
+    function copyText() {
+      // Get the text to copy
+      var textToCopy = document.getElementById("text-to-copy");
+
+      // Create a temporary input element
+      var inputElement = document.createElement("textarea");
+      inputElement.value = textToCopy.innerText;
+      document.body.appendChild(inputElement);
+
+      // Select and copy the text
+      inputElement.select();
+      document.execCommand("copy");
+
+      // Remove the temporary input element
+      document.body.removeChild(inputElement);
+
+      // Provide some feedback to the user (optional)
+      alert("Text copied to clipboard!");
+    }
+  </script>
+
+</body>
+</html>
+
+<a href="https://maps.app.goo.gl/dcZFBXKEjwaiTzki7">Click Here for Google Map Location</a><br>
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6597362297184!2d73.09949019999999!3d19.0347097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9dd2d3717bf%3A0x9c96bf9b08272c3!2sKumar%20Gymnasium!5e0!3m2!1sen!2sin!4v1703962605738!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>
