@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Kumar Gym</title>
     <style>
         body {
@@ -52,13 +53,12 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -103,12 +103,52 @@
         <li type="square">Admission Fees: ₹150/</li>
         <hr>
            <p>To subscribe, visit our gym or contact us at:</p>
-        <p>Email: <a href="mailto:info@kumargym.com">info@kumargym.com</a> | Phone: 8454988283</p>
+        <p>Email: <a href="mailto:info@kumargym.com">info@kumargym.com</a>
+          
+          <body>
+
+            <p id="phoneNumber">Phone:8454988283 <button id="copyButton" onclick="copyPhoneNumber()">
+                <i class="fas fa-copy"></i> <!-- Copy Icon from Font Awesome -->
+            </button>
+        
+            <script>
+                function copyPhoneNumber() {
+                    // Get the phone number element
+                    var phoneNumberElement = document.getElementById("phoneNumber");
+        
+                    // Extract only the numeric part
+                    var numericPart = phoneNumberElement.innerText.replace(/\D/g, '');
+        
+                    // Create a temporary input element to copy the text
+                    var tempInput = document.createElement("input");
+                    tempInput.value = numericPart;
+                    document.body.appendChild(tempInput);
+        
+                    // Select and copy the text
+                    tempInput.select();
+                    document.execCommand("copy");
+        
+                    // Remove the temporary input element
+                    document.body.removeChild(tempInput);
+        
+                    // Alert the user
+                    alert("Phone Number Copied: " + numericPart);
+                }
+            </script>
+        
+        </body>
+        </p>
         <hr>
         <p><strong>Time:</strong> Mor. 5:30-10:00AM | Eve. 4:00-10:00PM</p>
 
      
     </section>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <p>Start Your Fitness Journey With Us.</p>
+  </footer>
 
     
 </body>
