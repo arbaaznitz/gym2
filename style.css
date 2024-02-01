@@ -1,6 +1,21 @@
 /* Default styles for larger screens */
 
 /* Example media query for smaller screens (average Android mobile devices) */
+  @media (max-width: 998px) {
+            /* Styles for mobile devices */
+           html {
+                padding: 10px;
+                font-size: 55%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Styles for tablets */
+           html {
+                padding: 15px;
+                font-size: 45%;
+            }
+        }
 @media (max-width: 600px) {
     /* Your mobile styles here */
 
